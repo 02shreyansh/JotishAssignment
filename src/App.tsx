@@ -1,8 +1,18 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { EmployeeProvider } from './context/EmployeeContext';
 
-const App = () => {
+export default function App() {
   return (
-    <div className="bg-red-500">App</div>
-  )
+    <BrowserRouter>
+      <AuthProvider>
+        <EmployeeProvider>
+          <Routes>
+            <Route path="/" element={<Navigate to="/list" replace />} />
+            <Route path="*" element={<Navigate to="/list" replace />} />
+          </Routes>
+        </EmployeeProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  );
 }
-
-export default App
