@@ -73,7 +73,6 @@ export default function ListPage() {
     <div className="min-h-screen bg-ink-950">
       <Navbar />
       <main className="pt-14 max-w-screen-2xl mx-auto px-6 py-6">
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-ink-50 text-2xl font-display font-semibold">Employee Directory</h1>
@@ -109,10 +108,7 @@ export default function ListPage() {
             ⚠ {error}
           </div>
         )}
-
-        {/* Table */}
         <div className="bg-ink-900 border border-ink-700 rounded-2xl overflow-hidden">
-          {/* Header row */}
           <div className="flex items-center px-4 py-3 border-b border-ink-700 bg-ink-800/50">
             {columns.map(col => (
               <button
